@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmer Sacramento - Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FUNDO ANIMADO -->
+    <video class="video-fundo" autoplay muted loop playsinline>
+        <source src="Video/fundo.mp4" type="video/mp4">
+    </video>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="card-container">
+
+        <!-- FOTOGRAFIA -->
+        <div class="image-section">
+            <img
+                src="images/Emmer.jpg"
+                alt="Emmer Sacramento"
+                class="model-image"
+            >
+        </div>
+
+        <!-- TÍTULO E BOTÕES -->
+		 <div class="content-section">
+         <h1 class="name">Emmer Sacramento</h1>
+          <div class="botoes"></div>
+         <a href="images/Polaroids.jpg" target="_blank" rel="noopener" class="btn">Polaroids</a>  
+          <a href="https://emmersacramento.wixstudio.com/portfoliodeemmer" target="_blank" rel="noopener" class="btn">View Portfolio</a>
+         <a href="#" onclick="copiarEmail(); return false;" class="btn">Copiar E-mail</a>
+         <a href="https://www.instagram.com/emmersacramento/" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+
+    </div>
+
+        
+		</div>
+    </main>
+
+    <!-- COPIAR E-MAIL -->
+    <script>
+        async function copiarEmail() {
+            const email = "Emmersacramento@gmail.com";
+
+            try {
+                await navigator.clipboard.writeText(email);
+                alert("E-mail copiado com sucesso!");
+            } catch (error) {
+                window.location.href = "mailto:" + email;
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
